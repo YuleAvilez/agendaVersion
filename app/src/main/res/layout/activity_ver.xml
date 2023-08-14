@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VerActivity">
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="206dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="948dp"
+        android:backgroundTint="#E91E63"
+        android:text="Guardar"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.565"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtNombre"
+        style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+        android:layout_width="526dp"
+        android:layout_height="89dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="424dp"
+        android:backgroundTint="#FBAFC9"
+        android:backgroundTintMode="add"
+        android:breakStrategy="high_quality"
+        android:drawableLeft="@drawable/nombree"
+        android:drawingCacheQuality="auto"
+        android:ems="10"
+        android:labelFor="@+id/viewNombre"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtTelefono"
+        style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+        android:layout_width="526dp"
+        android:layout_height="89dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="560dp"
+        android:backgroundTint="#FBAFC9"
+        android:backgroundTintMode="add"
+        android:breakStrategy="high_quality"
+        android:drawableLeft="@drawable/telefono"
+        android:drawingCacheQuality="auto"
+        android:ems="10"
+        android:inputType="text"
+        android:labelFor="@+id/viewTelefono"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtCorreoElectronico"
+        style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+        android:layout_width="531dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="736dp"
+        android:backgroundTint="#FBAFC9"
+        android:backgroundTintMode="src_over"
+        android:drawableLeft="@drawable/email"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:labelFor="@+id/viewCorreo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/viewNombre"
+        android:layout_width="397dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="4dp"
+        android:text="@string/hint_nombre"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="398dp" />
+
+    <TextView
+        android:id="@+id/viewTelefono"
+        android:layout_width="397dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="4dp"
+        android:text="@string/hint_telefono"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="534dp" />
+
+    <TextView
+        android:id="@+id/viewCorreo"
+        android:layout_width="397dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="4dp"
+        android:text="@string/hint_correo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.541" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
