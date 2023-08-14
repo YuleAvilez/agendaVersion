@@ -6,98 +6,111 @@
     android:layout_height="match_parent"
     tools:context=".VerActivity">
 
-    <Button
-        android:id="@+id/btnGuardar"
-        android:layout_width="206dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="948dp"
-        android:backgroundTint="#E91E63"
-        android:text="Guardar"
-        android:textSize="16sp"
+    <androidx.cardview.widget.CardView
+        android:layout_width="400dp"
+        android:layout_height="600dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="32dp"
+        android:clipToPadding="false"
+        app:cardCornerRadius="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.565"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/txtNombre"
-        style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
-        android:layout_width="526dp"
-        android:layout_height="89dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="424dp"
-        android:backgroundTint="#FBAFC9"
-        android:backgroundTintMode="add"
-        android:breakStrategy="high_quality"
-        android:drawableLeft="@drawable/nombree"
-        android:drawingCacheQuality="auto"
-        android:ems="10"
-        android:labelFor="@+id/viewNombre"
-        android:inputType="text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="96dp"
+            android:fontFamily="serif"
+            android:text="Detalles"
+            android:textColor="#E91E63"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.177"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/txtTelefono"
-        style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
-        android:layout_width="526dp"
-        android:layout_height="89dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="560dp"
-        android:backgroundTint="#FBAFC9"
-        android:backgroundTintMode="add"
-        android:breakStrategy="high_quality"
-        android:drawableLeft="@drawable/telefono"
-        android:drawingCacheQuality="auto"
-        android:ems="10"
-        android:inputType="text"
-        android:labelFor="@+id/viewTelefono"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="206dp"
+            android:layout_height="57dp"
+            android:layout_marginLeft="70sp"
+            android:layout_marginTop="500dp"
+            android:backgroundTint="#E91E63"
+            android:text="Guardar"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.565"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/txtCorreoElectronico"
-        style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
-        android:layout_width="531dp"
-        android:layout_height="81dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="736dp"
-        android:backgroundTint="#FBAFC9"
-        android:backgroundTintMode="src_over"
-        android:drawableLeft="@drawable/email"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:labelFor="@+id/viewCorreo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/txtNombre"
+            style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+            android:layout_width="526dp"
+            android:layout_height="89dp"
+            android:layout_marginTop="200dp"
+            android:backgroundTint="#FBAFC9"
+            android:backgroundTintMode="add"
+            android:breakStrategy="high_quality"
+            android:drawableLeft="@drawable/nombre1"
+            android:drawablePadding="10dp"
+            android:drawingCacheQuality="auto"
+            android:ems="10"
+            android:inputType="text"
+            android:labelFor="@+id/viewNombre"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/viewNombre"
-        android:layout_width="397dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="4dp"
-        android:text="@string/hint_nombre"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="398dp" />
+        <EditText
+            android:id="@+id/txtTelefono"
+            style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+            android:layout_width="526dp"
+            android:layout_height="89dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="300dp"
+            android:backgroundTint="#FBAFC9"
+            android:backgroundTintMode="add"
+            android:breakStrategy="high_quality"
+            android:drawableLeft="@drawable/telefono2"
+            android:drawingCacheQuality="auto"
+            android:ems="10"
+            android:inputType="text"
+            android:labelFor="@+id/viewTelefono"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/viewTelefono"
-        android:layout_width="397dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="4dp"
-        android:text="@string/hint_telefono"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="534dp" />
+        <EditText
+            android:id="@+id/txtCorreoElectronico"
+            style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+            android:layout_width="531dp"
+            android:layout_height="81dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="400dp"
+            android:backgroundTint="#FBAFC9"
+            android:backgroundTintMode="src_over"
+            android:drawableLeft="@drawable/email2"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:labelFor="@+id/viewCorreo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/viewCorreo"
-        android:layout_width="397dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="4dp"
-        android:text="@string/hint_correo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.541" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabEditar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="340dp"
+            android:layout_marginTop="500dp"
+            android:clickable="true"
+            app:backgroundTint="@color/tu_color"
+            app:srcCompat="@drawable/editar" />
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

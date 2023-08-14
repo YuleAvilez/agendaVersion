@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -35,8 +36,11 @@ public class NuevoActivity extends AppCompatActivity {
 
                 if (id >0){
                     Toast.makeText(NuevoActivity.this, "Registro Guardado Con Exito",Toast.LENGTH_LONG).show();
+
+                    Intent intent =new Intent(NuevoActivity.this, MainActivity.class);
+                    startActivity(intent);
                 }else{
-                    Toast.makeText(NuevoActivity.this, "Error al guardar el regiistro", Toast.LENGTH_LONG).show();
+                    Toast.makeText(NuevoActivity.this, "Error al guardar el registro", Toast.LENGTH_LONG).show();
                 }
             }
 

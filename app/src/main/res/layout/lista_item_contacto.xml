@@ -12,42 +12,68 @@
     tools:layout_editor_absoluteY="-33dp">
 
 
-    <TextView
-        android:id="@+id/viewCorreo"
-        android:layout_width="319dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="232dp"
-        android:drawableLeft="@drawable/email2"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="    " />
 
-    <TextView
-        android:id="@+id/viewTelefono"
-        android:layout_width="316dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="144dp"
-        android:drawableLeft="@drawable/telefono2"
-        android:paddingTop="10dp"
-        android:paddingBottom="5dp"
-        android:textSize="20sp"
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:cardCornerRadius="30dp"
+        android:layout_marginTop="10dp"
+        android:clipToPadding="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="    " />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/viewNombre"
-        android:layout_width="328dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="84dp"
-        android:drawableLeft="@drawable/nombree"
-        android:fontFamily="monospace"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/viewNombre"
+                android:layout_width="328dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="10sp"
+                android:layout_marginEnd="8dp"
+                android:drawableLeft="@drawable/nombre1"
+                android:drawablePadding="10dp"
+                android:fontFamily="monospace"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/viewCorreo"
+                android:layout_width="316dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="40sp"
+                android:drawableLeft="@drawable/email2"
+                android:drawablePadding="10dp"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="    " />
+
+            <TextView
+                android:id="@+id/viewTelefono"
+                android:layout_width="316dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="20sp"
+                android:drawableLeft="@drawable/telefono2"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="    " />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

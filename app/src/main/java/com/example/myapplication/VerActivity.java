@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
@@ -10,11 +11,13 @@ import android.widget.EditText;
 
 import com.example.myapplication.db.DbContactos;
 import com.example.myapplication.entidades.Contactos;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class VerActivity extends AppCompatActivity {
     EditText txtNombre, txtTelefono, txtCorreoElectronico;
     Button btnGuardar;
 
+    FloatingActionButton fabEditar;
     Contactos contacto;
 
     int id= 0;
@@ -28,11 +31,13 @@ public class VerActivity extends AppCompatActivity {
         txtTelefono = findViewById(R.id.txtTelefono);
         txtCorreoElectronico = findViewById(R.id.txtCorreoElectronico);
         btnGuardar = findViewById(R.id.btnGuardar);
+        fabEditar = findViewById(R.id.fabEditar);
+
 
         if (savedInstanceState == null){
             Bundle extras = getIntent().getExtras();
             if (extras == null){
-                id= Integer.parseInt(null);
+               id=0;
             }else{
                 id= extras.getInt("ID");
             }
@@ -52,5 +57,13 @@ public class VerActivity extends AppCompatActivity {
             txtTelefono.setInputType(InputType.TYPE_NULL);
             txtCorreoElectronico.setInputType(InputType.TYPE_NULL);
         }
+        fabEditar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(VerActivity.this, EditarActivity.class);
+                intent.putExtra("ID", id);
+                startActivity(intent);
+            }
+        });
     }
 }

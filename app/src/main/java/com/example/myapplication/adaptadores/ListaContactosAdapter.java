@@ -55,8 +55,8 @@ public class ListaContactosAdapter extends RecyclerView.Adapter<ListaContactosAd
                 public void onClick(View view) {
                     Context context = viewNombre.getContext();
 
-                    Context Context = null;
-                    Intent intent = new Intent(Context, VerActivity.class);
+
+                    Intent intent = new Intent(context, VerActivity.class);
                     intent.putExtra("ID", listaContactos.get(getAdapterPosition()).getId());
                     context.startActivity(intent);
                 }

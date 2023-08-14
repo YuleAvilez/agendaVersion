@@ -35,6 +35,21 @@ public class DbContactos extends DbHelper {
         }
         return id;
     }
+    public boolean editarContacto(int id, String nombre, String telefono, String correo_electronico) {
+       boolean correcto = false;
+        DbHelper dbHelper = new DbHelper(context);
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        try {
+            db.execSQL(" UPDATE " + TABLE_CONTACTO + " SET nombre = '"+nombre+ "',telefono= '"+telefono+ "', correo_electronico = '"+correo_electronico+ "'WHERE id='"+id+"' ");
+            correcto= true;
+        } catch (Exception ex) {
+            ex.toString();
+            correcto = false;
+        }finally {
+            db.close();
+        }
+        return correcto;
+    }
 
     public ArrayList<Contactos> mostrarContactos(){
         DbHelper dbHelper = new DbHelper(context);

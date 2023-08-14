@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         ListaContactosAdapter adapter = new ListaContactosAdapter(dbContactos.mostrarContactos());
         listaContactos.setAdapter(adapter);
 
+
+
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

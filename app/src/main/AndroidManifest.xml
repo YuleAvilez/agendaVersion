@@ -35,9 +35,11 @@
             android:exported="false"
 
             />
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".MainActivity" />
+        <activity
+            android:name=".EditarActivity"
+            android:exported="false">
+
+        </activity>
     </application>
 
 
